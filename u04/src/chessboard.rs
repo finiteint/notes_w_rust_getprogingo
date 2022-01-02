@@ -39,6 +39,6 @@ impl ChessBoard {
 
 impl fmt::Display for ChessBoard {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
-        Ok(grids::format_grid_to(f, &self.0)?)
+        grids::format_grid_to(f, &self.0)
     }
 }

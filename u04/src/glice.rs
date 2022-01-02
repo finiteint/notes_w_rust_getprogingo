@@ -214,7 +214,7 @@ pub fn explore_arrays_of_copy_are_copy() {
         *mit += 2;
         println!("By mut ref! It's {}", mit);
     }
-    for mit in std::array::IntoIter::new(mits) {
+    for mit in mits {
         println!("Me take {}", mit);
     }
     println!("mits is {:?}", mits);

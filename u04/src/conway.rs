@@ -1,5 +1,5 @@
 use rand::{distributions::Bernoulli, prelude::Distribution, Rng};
-use std::{fmt, iter};
+use std::fmt;
 
 pub struct ConwaySim {
     cur: Universe,
@@ -17,7 +17,7 @@ impl ConwaySim {
         std::mem::swap(&mut self.cur, &mut self.next);
     }
 
-    pub fn universe<'a>(&'a self) -> &'a Universe {
+    pub fn universe(&self) -> &Universe {
         &self.next
     }
 }
@@ -115,7 +115,7 @@ fn dec_index_wrapping(index: usize, len: usize) -> usize {
 impl fmt::Display for Universe {
     fn fmt(&self, f: &mut fmt::Formatter<'_>) -> fmt::Result {
         let width = self.width;
-        let hmargin: String = iter::repeat('-').take(width).collect();
+        let hmargin: String = "-".repeat(width);
         writeln!(f, " {}", hmargin)?;
         for row in &self.cells {
             write!(f, "|")?;

@@ -57,7 +57,7 @@ fn days_in_month(year: i32, month: i32) -> i32 {
         2 if is_leap_year(year) => 29,
         2 => 28,
         4 | 6 | 9 | 11 => 30,
-        _ => 30,
+        _ => 31,
     }
 }
 

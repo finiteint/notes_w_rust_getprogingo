@@ -14,7 +14,7 @@ impl Rover {
     }
 
     pub fn message(&self) -> String {
-        self.gps.message()
+        format!("{}: {}", self.name, self.gps.message())
     }
 }
 
@@ -64,6 +64,10 @@ pub struct World {
 impl World {
     pub fn new(name: String, radius: f64) -> Self {
         Self { name, radius }
+    }
+
+    pub fn name(&self) -> &str {
+        &self.name
     }
 
     pub fn distance(&self, a: &Location, b: &Location) -> f64 {

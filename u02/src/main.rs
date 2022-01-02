@@ -27,7 +27,7 @@ fn ascii_vig_encode(cleartext: &str, key: &str) -> String {
 }
 
 fn key_to_shifts(key: &str) -> Vec<u8> {
-    const START: u8 = 'A' as u8;
+    const START: u8 = b'A';
     key.chars()
         .map(|c| {
             if c.is_ascii_alphabetic() {

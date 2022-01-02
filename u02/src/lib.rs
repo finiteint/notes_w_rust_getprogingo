@@ -3,7 +3,7 @@ use num::BigInt;
 use rand::prelude::SliceRandom;
 
 pub fn run() {
-    let when = Utc.timestamp(12622780800, 0);
+    let when = Utc.timestamp_opt(12622780800, 0).unwrap();
     println!("{}", when);
     floating_piggy_bank();
     integral_piggy_bank();

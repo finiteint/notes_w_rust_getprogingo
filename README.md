@@ -11,7 +11,7 @@ curious how equivalent things are done in Rust. This is not
 meant to be useful in any way.
 
 It is split by units, but not organized or structured in any way.
-It is neither complete or nor correct.
+It is neither complete nor correct.
 
 
 
@@ -21,3 +21,4 @@ It is neither complete or nor correct.
 * [Unit 4](./u04/)
 * [Unit 5](./u05/)
 * [Unit 6](./u06/)
+* [Unit 7](./u07/)

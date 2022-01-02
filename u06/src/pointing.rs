@@ -1,3 +1,5 @@
+use std::ptr;
+
 use chrono::{Duration, Local};
 
 use u06::turtle::Turtle;
@@ -363,7 +365,7 @@ pub fn exploring_refs_simple() {
     // this has to be done manually
     println!(
         "raw pointers to different vars with same value: are they equal? {}",
-        (ps as *const char) == (pu as *const char)
+        ptr::eq(ps, pu) // references coerce to raw pointers
     );
     // accessing elements through reference to arrays work without manual dereference
     let ss = [1i32, 2, 3];
