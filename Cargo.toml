@@ -7,5 +7,9 @@ members = [
 	"u04",
 	"u05",
 	"u06",
+	"u07",
 
 ]
+
+[profile.dev]
+# panic = "abort"
